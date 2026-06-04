@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>유명한 명언 모음</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300;400&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="header-top-line"></div>
+      <h1>명언 모음</h1>
+      <div class="header-ornament">
+        <span class="orn-line"></span>
+        <span class="orn-diamond">✦</span>
+        <span class="orn-line orn-line--right"></span>
+      </div>
+      <p class="subtitle">WORDS THAT CHANGE YOUR LIFE</p>
+    </header>
+
+    <main class="quote-wrapper">
+      <div class="quote-card" id="quoteCard">
+        <span class="quote-mark">"</span>
+        <span class="category-badge" id="category"></span>
+        <p class="quote-text" id="quoteText"></p>
+        <div class="quote-divider"></div>
+        <p class="quote-author" id="quoteAuthor"></p>
+        <p class="quote-origin" id="quoteOrigin"></p>
+      </div>
+
+      <div class="controls">
+        <button class="btn" id="prevBtn" onclick="changeQuote(-1)">&#8592; 이전</button>
+        <span class="counter" id="counter"></span>
+        <button class="btn" id="nextBtn" onclick="changeQuote(1)">다음 &#8594;</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>위대한 사람들의 말 한마디가 당신의 하루를 바꿉니다.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

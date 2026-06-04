@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+header {
+  text-align: center;
+}
+
+.header-top-line {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, transparent, rgba(226, 194, 125, 0.6));
+  margin: 0 auto 22px;
+}
+
+header h1 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 200;
+  letter-spacing: 16px;
+  text-indent: 16px;
+  background: linear-gradient(135deg, #c9a84c 0%, #f0d080 35%, #ffe9a0 50%, #f0d080 65%, #c9a84c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header-ornament {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 180px;
+  margin: 14px auto 12px;
+}
+
+.orn-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(226, 194, 125, 0.55));
+}
+
+.orn-line--right {
+  background: linear-gradient(to left, transparent, rgba(226, 194, 125, 0.55));
+}
+
+.orn-diamond {
+  color: #e2c27d;
+  font-size: 0.45rem;
+  opacity: 0.75;
+  line-height: 1;
+}
+
+.subtitle {
+  color: rgba(200, 185, 155, 0.45);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 200;
+  letter-spacing: 6px;
+}
+
+.quote-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.quote-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(226, 194, 125, 0.25);
+  border-radius: 20px;
+  padding: 50px 44px 40px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.quote-card.fade-out {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.quote-mark {
+  font-size: 6rem;
+  line-height: 1;
+  color: #e2c27d;
+  opacity: 0.25;
+  position: absolute;
+  top: 14px;
+  left: 24px;
+  font-family: 'Times New Roman', serif;
+  user-select: none;
+}
+
+.category-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: rgba(226, 194, 125, 0.08);
+  border: 1px solid rgba(226, 194, 125, 0.3);
+  color: #c9a84c;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.quote-text {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 2;
+  color: #ddd;
+  margin-top: 10px;
+  word-break: keep-all;
+}
+
+.quote-divider {
+  width: 40px;
+  height: 2px;
+  background: #e2c27d;
+  opacity: 0.55;
+  margin: 22px 0 16px;
+}
+
+.quote-author {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: #e2c27d;
+  letter-spacing: 2px;
+}
+
+.quote-origin {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #666;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.btn {
+  background: rgba(226, 194, 125, 0.08);
+  border: 1px solid rgba(226, 194, 125, 0.35);
+  color: #e2c27d;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  background: rgba(226, 194, 125, 0.22);
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+  transform: none;
+}
+
+.counter {
+  color: #555;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  min-width: 60px;
+  text-align: center;
+}
+
+footer {
+  color: #444;
+  font-size: 0.82rem;
+  text-align: center;
+}
